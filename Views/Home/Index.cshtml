@@ -1,0 +1,57 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+</head>
+<body>
+
+    @using Feeds.Views.Home;
+
+    @{
+        //Address for Mercury reader Api
+        string mercuryReaderUrl = "https://mercury.postlight.com/amp?url=";
+
+        RssGetData data = new RssGetData();
+
+        //Header
+        <div class="logo-body">
+            <div class="uptime-logo">
+                <a href="~/Content/logo.png" target="_blank"><img id="imge" src="~/Content/logo.png" alt="" /></a>
+            </div>
+        </div>
+        <div class="feed-body">
+            @foreach (var value in data.GetData())
+            {
+                <div class="feed">
+                    @if (value.Variable3 != String.Empty)
+                    {
+                        <img class="image" src="@value.Variable3" />
+                    }
+                    else
+                    {
+                        <img class="image" src="~/Content/no-image-available.jpg" />
+                    }
+
+                    <a class="title" href="@mercuryReaderUrl@value.Variable2" target="_blank">@value.Variable1</a>
+                    <p class="description">@value.Variable6</p>
+                    @if (value.Variable8 != String.Empty)
+                    {
+                        <span class="author">Author: @value.Variable8</span>
+                    }
+
+                    @if (value.Variable4 != String.Empty)
+                    {
+                        <span class="category"><a href="@value.Variable5" target="_blank">Category: @value.Variable4</a></span>
+                    }
+                    <span class="pubdate">@value.Variable7.TimeAgo()</span>
+                </div>
+            }
+        </div>
+    }
+</body>
+</html>

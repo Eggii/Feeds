@@ -1,0 +1,37 @@
+﻿
+
+Minu lahenduskäigu kirjeldus:
+
+Kaustad: 
+
+1. Content: 
+	
+	no-image-availible.jpg - puuduvate piltide jaoks rss failis.
+	logo.png - veebilehe logo.
+	Site.css - veebilehe peamine kujundus.
+
+2. Controllers:
+
+	ErrorController.cs - veebile errorite kontroller, kui  midagi peaks valesti 
+	minema käitusajal.
+	HomeController.cs - Veebilehe peamine kontroller.
+
+3. Extensions:
+
+	EntityExtension.cs - Laiendus eemeldamaks tekstist üleliigseid HTML olemeid.
+	Timespan.cs - laiendus tegemaks kuupäeva õigesse vormingusse(kui palju aega tagasi).
+
+4. Home:
+
+	Index.cshtml - peamine veebilehe sisu.
+	RssGetData.cs - veebilehele andmete importimine teiselt veebilehelt.
+	RssVariables.cs - vajalike andmete hoidmine.
+
+5. Shared:
+
+	Error.cshtml - vea korral kasutatakse seda lehekülge.
+	Web.config - lisasin system.web elemendile erindi käsitlemiseks ühe elemendi:
+	<customErrors mode="On" defaultRedirect="~/Error/Error/">
+      <error statusCode="404" redirect="~/Home/Index/"/>
+
+6. Ülejäänud kaustad ja failid on Visual Studio genereeritud.

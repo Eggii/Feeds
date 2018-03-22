@@ -1,0 +1,112 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+.uptime-logo {
+    float: left;
+    margin-top: 10px;
+    background-color: #9aaae9;
+    width: 75%;
+    float: right;
+}
+
+    .uptime-logo img {
+        height: 30px;
+    }
+
+.image {
+    width: 40%;
+    height: 35vw;
+    object-fit: cover;
+    float: left;
+    margin-right: 8px;
+}
+
+.feed-body {
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-top: 10px;
+}
+
+.feed {
+    clear: both;
+    padding: 8px 8px 8px 0;
+}
+
+.title {
+    font-size: 7.95vw;
+    color: black;
+}
+
+.description {
+    display: none;
+}
+
+.category {
+    display: none;
+}
+
+.pubdate {
+    float: right;
+    color: #2ded43;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 700;
+}
+
+@media screen and (min-width: 640px) {
+    body {
+        background-color: #edf3f5;
+    }
+
+    .uptime-logo img {
+        height: 50px;
+    }
+
+    .feed-body {
+        background-color: #edf3f5;
+    }
+
+    .feed {
+        width: 50%;
+        float: left;
+        clear: none;
+    }
+
+        .feed:hover {
+            background-color: white;
+        }
+
+    .image {
+        max-width: 100%;
+        height: auto;
+        float: right;
+        padding-left: 8px;
+    }
+
+    .title {
+        font-size: 2.29vw;
+    }
+
+    .description {
+        display: block;
+        padding: 0;
+        margin: 0
+    }
+
+    .pubdate,
+    .author,
+    .category {
+        display: inherit;
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .feed {
+        width: 33.333%;
+    }
+}

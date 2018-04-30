@@ -2,6 +2,8 @@
 
 Minu lahenduskäigu kirjeldus:
 
+Kasutasin .Net MVC raamistikku ülesande lahendamisel.
+
 Kaustad: 
 
 1. Content: 
